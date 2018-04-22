@@ -1,0 +1,3 @@
+aws secretsmanager create-secret --name NAME_OF_SECRET --secret-string file://YOUR_PEM_FILE.pem
+
+$(aws secretsmanager get-secret-value --secret-id NAME_OF_SECRET | jq '.SecretString' --raw-output) > sshfile.pem
