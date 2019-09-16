@@ -2,7 +2,7 @@
 
 This tutorial assumes:
 
-* A KMS Customer Managed Key (CMK) already exists
+* A KMS Customer Master Key (CMK) already exists
 * The user or IAM Role has access to KMS
 * The user or IAM Role has access to the CMK
 
