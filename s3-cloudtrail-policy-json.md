@@ -21,6 +21,8 @@ each statement id to add entropy.
       "Condition": {
         "StringEquals": {
           "aws:SourceArn": "arn:aws:cloudtrail:<-aws-region->:<-aws-account-number->:trail/trailName"
+        }
+      }
     },
     {
       "Sid": "AWSCloudTrailWrite",
