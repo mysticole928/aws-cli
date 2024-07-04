@@ -17,7 +17,10 @@ each statement id to add entropy.
         "Service": "cloudtrail.amazonaws.com"
       },
       "Action": "s3:GetBucketAcl",
-      "Resource": "arn:aws:s3:::<---s3-bucket-name--->"
+      "Resource": "arn:aws:s3:::<---s3-bucket-name--->",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceArn": "arn:aws:cloudtrail:<-aws-region->:<-aws-account-number->:trail/trailName"
     },
     {
       "Sid": "AWSCloudTrailWrite",
@@ -29,7 +32,8 @@ each statement id to add entropy.
       "Resource": "arn:aws:s3:::<---s3-bucket-name--->/AWSLogs/<---AWS-ACCOUNT-NUMBER--->/*",
       "Condition": {
         "StringEquals": {
-          "s3:x-amz-acl": "bucket-owner-full-control"
+          "s3:x-amz-acl": "bucket-owner-full-control",
+          "aws:SourceArn": "arn:aws:cloudtrail:<-aws-region->:<-aws-account-number->:trail/trailName"
         }
       }
     }
