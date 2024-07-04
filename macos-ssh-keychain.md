@@ -2,8 +2,8 @@
 
 To use a .pem file with ssh, add the `-i` option and the name of the pem file.
 
-```bash
-ssh -i <file.pem> ec2-user@domain.name.or.fqdn
+```shell
+ssh -i <file.pem> ec2-user@domain.name.fqdn
 ```
 
 # Store SSH keys (PEM files) in MacOS keychain
@@ -16,9 +16,9 @@ Then edit (or create) the `config` file in the `.ssh` directory and add the foll
 
 ```
 Host: *
-UseKeychain yes
-AddKeysToAgent yes
-IdentityFile ~./ssh/file.pem
+  UseKeychain yes
+  AddKeysToAgent yes
+  IdentityFile ~./ssh/file.pem
 ```
 
 It's possible to have multiple hosts in the `config` file.  
@@ -35,7 +35,7 @@ ssh-add -K file.pem
 
 In MacOS 13, this command still works.  However, there's a warning message:
 
-```
+```shell
 WARNING: The -K and -A flags are deprecated and have been replaced
          by the --apple-use-keychain and --apple-load-keychain
          flags, respectively.  To suppress this warning, set the
@@ -45,7 +45,7 @@ WARNING: The -K and -A flags are deprecated and have been replaced
 
 The updated command is:
 
-```
+```shell
 ssh-add --apple-use-keychain file.pem
 ```
 
