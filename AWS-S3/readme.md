@@ -1,5 +1,5 @@
 # AWS S3 Scripts and CLI Examples
-_Created: 2026-01-02_
+Created: 2026-01-02
 
 ## S3 Bucket Info Scripts
 
@@ -16,6 +16,7 @@ For each S3 `get-bucket-*` API call, the script:
 - Prints an error block for unexpected failures
 
 Note: The bucket creation date is retrieved from `s3api list-buckets`.
+
 This is the authoritative source for S3 bucket creation time.
 
 **Outputs Include:**
