@@ -1,5 +1,5 @@
 # AWS S3 Scripts and CLI Examples
-## Created: 2026-01-02
+_Created: 2026-01-02_
 
 ## S3 Bucket Info Scripts
 
