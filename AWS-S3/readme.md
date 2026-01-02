@@ -9,7 +9,7 @@
 These scripts display the configuration and metadata for an 
 Amazon S3 bucket in `YAML` format.
 
-For each S3 "get-bucket-*" API call, the script:
+For each S3 `get-bucket-*` API call, the script:
 
 - Prints the configuration if it exists
 - Prints "status: not configured" when the configuration is absent
